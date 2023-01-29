@@ -2,6 +2,7 @@ using System;
 
 namespace Develop02
 {
+    //Databse class
     public class Database
 {
   private List<JournalEntries> entries;

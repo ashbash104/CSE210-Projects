@@ -1,6 +1,7 @@
 using System;
 
 namespace Develop02
+//Main program class
 {
     class Program
     static void Main(string[] args)
