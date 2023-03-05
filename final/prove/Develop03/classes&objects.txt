@@ -1,0 +1,15 @@
+class
+* a code structure
+* an organization of code
+* a collection of member variables and methods
+* represents an object or thing in the real world
+* has attributes and functions
+* a blueprint of an object
+
+example
+* Car
+* A car has attributes ie. color, size, cost, volume
+* Possible functions: Drive (), Park (), Start ()
+
+Object
+* an implementation of a class.

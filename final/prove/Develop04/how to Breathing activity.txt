@@ -1,0 +1,9 @@
+Breathing Activity:
+1. Display name and description
+2. Ask user how many seconds they want the activity to last
+3. Have timer?
+4.. Display "Breathe in" & show countdown for 4 seconds
+5. Clear Console
+6. Display "Breathe out" & show countdown 4 seconds
+7. Display ending message
+
