@@ -19,7 +19,9 @@ public class Word
     }
     public void ShowWord()
     {
+        
         Console.Write(_content + " ");
+        
         //set the isHidden variable to false    
     }
     // public bool IsHidden()

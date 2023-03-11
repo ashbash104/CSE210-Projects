@@ -48,10 +48,13 @@ public class Scripture
     }
     public void GetDisplayText()
     {
+        Console.Write("2 Nephi 26:24: \"");
         foreach (Word word in scripture)
         {
             word.ShowWord();
         }
+        Console.Write("\"");
+        Console.WriteLine("");
         //Go through each word, call its GetDisplayText method and append it to a string        return"";
     }
     public bool isCompletelyHidden()

@@ -26,7 +26,7 @@ class Program
                     scripture1.HiddenWords();
                     scripture1.HiddenWords();
                     scripture1.HiddenWords();
-                    
+                    //reference1.GetReferenceText();
                     scripture1.GetDisplayText();
 
                     if(scripture1.isCompletelyHidden())
