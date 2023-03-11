@@ -4,6 +4,11 @@ namespace Develop04 {
 
         }
 
+        public override int GetPoints()
+        {
+            return 20;
+        }
+
     }
 
 }

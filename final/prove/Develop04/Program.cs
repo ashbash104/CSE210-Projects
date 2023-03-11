@@ -4,6 +4,11 @@ namespace Develop04 {
     {
         static void Main(string[] args)
         {
+            BreathingActivity breathingActivityEx = new BreathingActivity("Breathing","Activity");
+            ReflectingActivity reflectingActivityEx = new ReflectingActivity("R","A");
+            Console.WriteLine(breathingActivityEx.GetActivityType());
+            Console.WriteLine(reflectingActivityEx.GetActivityType());
+
             // Menu
             Console.WriteLine("Menu Options:");
             Console.WriteLine("1. Start breathing activity");
@@ -74,6 +79,10 @@ namespace Develop04 {
                 }
                 else if (userInput == "4") {done = true;}
             }
+
+            // abstact method example
+            // Activity activity = new Activity();
+        
         }
     }
 

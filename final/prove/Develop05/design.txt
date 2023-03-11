@@ -1,0 +1,15 @@
+Classes
+* SimpleGoals
+* EternalGoals
+* ChecklistGoals
+
+[SimpleGoals]
+* Member variables
+    * _goalsDescription - string
+    * _goal - string
+    * _points - int
+* Methods
+    *GetGoal() - string
+    *SaveGoal()
+    *GoalComplete() - bool?
+    *AddPoints() - int

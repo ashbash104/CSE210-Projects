@@ -26,11 +26,15 @@ class Program
                     scripture1.HiddenWords();
                     scripture1.HiddenWords();
                     scripture1.HiddenWords();
+                    
                     scripture1.GetDisplayText();
-                    //if (scripture1.isCompletelyHidden())
-                    // {
-                    //     break;
-                    // }
+
+                    if(scripture1.isCompletelyHidden())
+                    {
+                         Console.Clear();
+                         scripture1.GetDisplayText();
+                         break;
+                    }
                }  
         }
     }

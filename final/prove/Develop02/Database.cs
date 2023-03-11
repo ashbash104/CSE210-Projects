@@ -11,8 +11,7 @@ namespace Develop02
     {
         entries = new List<JournalEntries>();
     }
-    public List<JournalEntries> SearchEntries(DateTime date,
-                                            bool byTime)
+    public List<JournalEntries> SearchEntries(DateTime date,bool byTime)
 {
     List<JournalEntries> found = new List<JournalEntries>();
     foreach (JournalEntries entry in JournalEntries)

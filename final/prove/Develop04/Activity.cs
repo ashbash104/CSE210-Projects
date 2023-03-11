@@ -1,9 +1,10 @@
 namespace Develop04 {
     // parent class for breathing, reflecting, and listing activities
     // will hold the code which its children will use
-    class Activity {
+    public abstract class Activity {
         public string _activityName = "";
         public string _activityDescription = "";
+        public int _activityPoints = 0;
 
         public int _duration = 0;
 
@@ -27,6 +28,13 @@ namespace Develop04 {
         public void PromptDuration() {
             Console.Write("How long would you like the activity to last? (In seconds) ");
             _duration = Int32.Parse(Console.ReadLine());
+        }
+        
+        public abstract int GetPoints();
+        // public abstract string GetUniqueString();
+
+        public virtual string GetActivityType() {
+            return "Activity";
         }
     }
 

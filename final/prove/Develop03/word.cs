@@ -1,21 +1,13 @@
 public class Word
 {
-    private string _content;
+    public string _content;
     // private bool _isHidden;
     public Word(string text)
     {
         _content = text;
         // _isHidden = false;
     }
-    // public string GetDisplayText()
-    // {
-    //     if (_isHidden == false) {
-    //         return _content;
-    //     }
-    //     else {
-    //         return "____";
-    //     }
-    // }
+
     public void HideWord()
     {
         int letterCount = _content.Length;
