@@ -1,30 +1,42 @@
 using System;
 
 namespace Develop02
+//Database program class
 {
-    //Databse class
-    public class Database
-{
-  private List<JournalEntries> entries;
+    class Database
+    {
+        private List<Entry> entries;
 
-    public Database()
-    {
-        entries = new List<JournalEntries>();
-    }
-    public List<JournalEntries> SearchEntries(DateTime date,bool byTime)
-{
-    List<JournalEntries> found = new List<JournalEntries>();
-    foreach (JournalEntries entry in JournalEntries)
-    {
-        if ((!byTime) && (entry.Occurs.Date == date.Date))
-            found.Add(entry);
-    }
-    return found;
-}
-}
+        public Database()
+        {
+            entries = new List<Entry>();
+        }
+    
+        public void AddEntry(DateTime occurs, string text)
+        {
+            entries.Add(new Entry(occurs, text));
+        }
 
-    internal class JournalEntries
-    {
-        public object Occurs { get; internal set; }
+        public List<Entry> FindEntries(DateTime date, bool byTime)
+        {
+            List<Entry> found = new List<Entry>();
+            foreach (Entry entry in entries)
+            {
+                if (((byTime) && (entry.Occurs == date)) // filtered by time and date
+                ||
+                ((!byTime) && (entry.Occurs.Date == date.Date))) // filtered by date only
+                    found.Add(entry);
+            }
+            return found;
+        }
+
+        public void DeleteEntries(DateTime date)
+        {
+            List<Entry> found = FindEntries(date, true);
+            foreach (Entry entry in found)
+                entries.Remove(entry);
+        }
+
+
     }
 }
