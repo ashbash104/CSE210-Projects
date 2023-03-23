@@ -3,35 +3,23 @@ using System.Collections.Generic;
 
 public class BreathingActivity
 {
-
     private string _activity;
     private string _text;
     private string _question;
 
-    public BreathingActivity(string activity, string text, string question)
+    public int _seconds = 0;
+    public string _secondsString;
+
+    public BreathingActivity(string activity, string text)
     {
         _activity = activity;
         _text = text;
-        _question = question;
     }
-    public string GetNameActivity()
-    {
-        return $"Welcome to the {_activity}.";
-    }
-
-    public string GetDescription()
-    {
-        return $"Description: {_text}";
-    }
-    public string GetQuestion()
-    {
-        return $"{_question} in the {_activity} session?";
-
-    }
-    public string GetActivityIntro()
-    {
-        return $"{_activity} session is starting. Get ready...";
-    }
+    public void DisplayStartingMessage() 
+        {
+            Console.WriteLine($"Welecome to the {_activity}! {_text}");
+        }
+        
     public void AnimationMain()
     {
         List<string> animation0 = new List<string>();
@@ -50,6 +38,7 @@ public class BreathingActivity
 
         Console.WriteLine();
     }
+
     public void AnimationNumbers()
     {
         List<string> animationN = new List<string>();
@@ -71,22 +60,63 @@ public class BreathingActivity
         Console.WriteLine();
         Console.WriteLine("Well Done!");
         Console.WriteLine();
-        Console.WriteLine($"You have completed 10 seconds of the {_activity}.");
+        Console.WriteLine($"You have completed {_secondsString} seconds of the {_activity}.");
         Console.WriteLine();
         Console.WriteLine("Going back to the menu, please wait...");
     }
 
     public void Activity1()
     {
-        Console.WriteLine("Breathe in...");
-        AnimationNumbers();
+        Console.Write("How long would you like the activity to last (in seconds)? ");
+        int _seconds = Int32.Parse(Console.ReadLine());
+        _secondsString = _seconds.ToString();
+         //breathingActivity.PromptDuration();
 
-        Console.WriteLine();
+        // Step 3: Start timer
+        //breathingActivity.StartTimer();
+        DateTime startTime = DateTime.Now;
+        DateTime futureTime = startTime.AddSeconds(_seconds);
+        DateTime currentTime = DateTime.Now;
+        while (currentTime < futureTime)
+        {
+            Console.Write("Breate in...");
+            int num = 0;
+            while (num < 5) 
+            {
+                Console.Write("+");
 
-        Console.WriteLine("Breathe out...");
-        AnimationNumbers();
+                Thread.Sleep(500);
+
+                Console.Write("\b \b"); // Erase the + character
+                Console.Write("-"); // Replace it with the - character
+                Thread.Sleep(500);
+                Console.Write("\b \b"); // Erase the + character
+                num ++;
+            }
+                Console.WriteLine();
+                Console.Write("Breathe out...");
+                num = 0;
+                while (num < 5) 
+                {
+                    Console.Write("+");
+
+                    Thread.Sleep(500);
+
+                            
+                    Console.Write("\b \b"); // Erase the + character
+                    Console.Write("-"); // Replace it with the - character
+                    Thread.Sleep(500);
+                    Console.Write("\b \b"); // Erase the + character
+
+                    num ++;
+                }
+                    Console.WriteLine();
+                    currentTime = DateTime.Now;
+
+        }
     }
 
 }
+
 
 

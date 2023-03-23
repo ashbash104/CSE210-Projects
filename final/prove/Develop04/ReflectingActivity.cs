@@ -4,12 +4,17 @@ using System.Collections.Generic;
 
 public class ReflectingActivity : BreathingActivity
 {
-        public ReflectingActivity(string activity, string text, string question) : base(activity, text, question)
+    private string _activity2;
+    private int seconds = 0;
+    public ReflectingActivity(string activity, string text) : base(activity, text)
     {
 
     }
     public void Activity2()
     {
+        // Console.Write("How long would you like the activity to last (in seconds)? ");
+        // int _seconds = Int32.Parse(Console.ReadLine());
+        // _secondsString = _seconds.ToString();
 
         Random _random = new Random();
 
@@ -21,11 +26,14 @@ public class ReflectingActivity : BreathingActivity
             "What emotions did you feel today and how did that affect you?",
 
         };
+        //Clear the console for the activity
+        Console.Clear();
 
         Console.WriteLine("Consider the following prompt:");
 
         int index = _random.Next(0, 4);
         Console.WriteLine(_thinker[index]);
+
 
         Console.WriteLine();
         Console.WriteLine("When you have something in mind, press enter to continue.");
@@ -38,20 +46,19 @@ public class ReflectingActivity : BreathingActivity
         
         Console.Clear();
 
-        List<string> _questions = new List<string>
-        {
-            "Why was this experience meaningful to you? ",
-            "Have you ever done anything like this before? ",
-            "How did you get started? ",
-            "How did you feel when it was complete? ",
-            "What made this time different than other times when you were not as successful? ",
-            "What is your favorite thing about this experience? ",
-            "What could you learn from this experience that applies to other situations? ",
-            "What did you learn about yourself through this experience? ",
-            "How can you keep this experience in mind in the future? ",
-        };
 
-        List<string> animationQRA = new List<string>();
+
+            List<string> _questions = new List<string>
+            {
+                "Why was this experience meaningful to you? ",
+                "Have you ever done anything like this before? ",
+                "How did you feel when it was complete? ",
+                "What made this time different than other times when you were not as successful? ",
+                "What could you learn from this experience that applies to other situations? ",
+                "What did you learn about yourself through this experience? ",
+            };
+
+            List<string> animationQRA = new List<string>();
             animationQRA.Add("|");
             animationQRA.Add("/");
             animationQRA.Add("-");
@@ -70,7 +77,7 @@ public class ReflectingActivity : BreathingActivity
 
         foreach (string a in _questions)
         {
-            int index2 = _random.Next(0, 9);
+            int index2 = _random.Next(0, 4);
             Console.Write(_questions[index2]);
 
             foreach (string b in animationQRA)
@@ -80,9 +87,19 @@ public class ReflectingActivity : BreathingActivity
                 Console.Write("\b \b");       
             }
             
-            Console.WriteLine();
+                Console.WriteLine();
+            
         }
-
+    }
+    public void DisplayLastMessageActivity2()
+    {
+        string activity = _activity2;
+        Console.WriteLine();
+        Console.WriteLine("Well Done!");
+        Console.WriteLine();
+        Console.WriteLine($"You have completed 90 seconds of the Reflecting Activity! Start the activity again to consider another prompt.");
+        Console.WriteLine();
+        Console.WriteLine("Going back to the menu, please wait...");
     }
 
 }
