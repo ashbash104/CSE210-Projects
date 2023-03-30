@@ -18,10 +18,10 @@ class Video
     public int _length { get; set; }
 
     //displayVideo() in correct form (title, author,length)
-    public string DisplayVideo()
+    public void DisplayVideo()
     {
-        return "---------------------------------------------------------";
-        return "Video: ";
-        return $"{_title} By: {_author} {_length}minutes.";
+        Console.WriteLine("---------------------------------------------------------");
+        Console.Write("Video: ");
+        Console.WriteLine($"{_title} By: {_author} Length: {_length} minutes.");
     }
 }

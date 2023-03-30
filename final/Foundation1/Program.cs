@@ -15,16 +15,16 @@ class Program
         video1.DisplayVideo();
         comments.GetNumberofComments1();
         comments.DisplayCommentsVid1();
-        comments.EndOFComments();
+        //comments.EndOFComments();
 
         video2.DisplayVideo();
         comments.GetNumberofComments2();
         comments.DisplayCommentsVid2();
-        comments.EndOFComments();
+        //comments.EndOFComments();
 
         video3.DisplayVideo();
         comments.GetNumberofComments3();
         comments.DisplayCommentsVid3();
-        comments.EndOFComments();
+        //comments.EndOFComments();
     }
 }
