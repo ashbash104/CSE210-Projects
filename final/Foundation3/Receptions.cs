@@ -1,15 +1,16 @@
 using System;
 
-class Receptions
+class Reception : Event
 {
-    public string _rsvp;
-    public string _weather;
+    private bool _rsvp;
+
+    public Reception(string nameEvent, string typeEvent, string description, int time, bool rsvp) : base(nameEvent, typeEvent, description, time)
+    {
+        _rsvp = rsvp;
+    }
+
     public void Register()
     {
-
-    }
-    public void Forecast()
-    {
-        
+        Console.WriteLine("Thank you for responding to the RSVP!");
     }
 }

@@ -1,6 +1,6 @@
 using System;
 
-class Events
+class Event
 {
     public string _nameEvent;
     public string _typeEvent;
@@ -11,16 +11,20 @@ class Events
     {
         " "," "
     };
-    public string DisplayDetails()
+    public Event(string nameEvent, string typeEvent, string description, int time)
     {
+        _nameEvent = nameEvent;
+        _typeEvent = typeEvent;
+        _description = description;
+        _time = time;
 
     }
-    public string DisplayFullDetails()
+    public void DisplayEvent()
     {
+        Console.WriteLine($"Event: {_nameEvent}");
+        Console.WriteLine($"Type: {_typeEvent}");
+        Console.WriteLine($"Description: {_description}");
+        Console.WriteLine($"Time: {_time} PM");
+    }
 
-    }
-    public string DisplayDescription()
-    {
-        
-    }
 }
