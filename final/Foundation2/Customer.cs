@@ -8,4 +8,8 @@ class Customer
     {
         _customerName = name;
     }
+    public string GetCustomerName()
+    {
+        return _customerName;
+    }
 }
