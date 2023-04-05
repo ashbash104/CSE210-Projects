@@ -2,11 +2,11 @@ using System;
 
 class Address
 {
-    public string _streetAddress;
-    public string _city;
-    public string _state;
-    public int _zip;
-    public string _country;
+    private string _streetAddress;
+    private string _city;
+    private string _state;
+    private int _zip;
+    private string _country;
 
     public Address(string streetAddress, string city, string state, int zip, string country)
     {

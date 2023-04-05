@@ -6,11 +6,7 @@ class Order
     Customer _customerName;
 
     public List<Product> products;
-    public int _shippingCost;
-    // List<string> _listOrder = new List<string> 
-    // {
-    //     " ", " "
-    // };
+    private int _shippingCost;
     public Order(string name, string streetAddress, string city, string state, int zip, string country) 
     {
         _address = new Address(streetAddress, city, state, zip, country);

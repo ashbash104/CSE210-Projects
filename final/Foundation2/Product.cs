@@ -3,11 +3,11 @@ using System;
 class Product
 {
 
-    public string _name;
-    public int _id;
-    public double _price;
-    public int _priceInt;
-    public int _quantity;
+    private string _name;
+    private int _id;
+    private double _price;
+    private int _priceInt;
+    private int _quantity;
     public List<string> products;
 
     public Product(string productName, int id, double price, int quantity)
